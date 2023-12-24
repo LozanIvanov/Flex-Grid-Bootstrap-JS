@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;  
+        }
+        .box{
+          height: 100px;
+          background: greenyellow; 
+          margin-bottom: 10px;
+          border: 1px solid black;  
+          display: flex; 
+          justify-content: center;   
+          align-items: center;
+        }
+        .w-45{
+            width: 45%;
+        }
+        .w-100{
+            width: 100%;
+        }
+        @media(max-width:1024px){
+            .m-100{
+                width: 100%;
+            }
+            .m-30{
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box w-45 m-100" >1</div>
+        <div class="box w-45 m-100">2</div>
+        <div class="box w-100 m-30">3</div>
+        <div class="box w-45 m-30" >4</div>
+        <div class="box w-45 m-30" >5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            float: left;
+            width: 30%;
+            height: 200px;
+            background: greenyellow;
+        }
+
+        .box:nth-child(2) {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        @media(max-width:1024px) {
+            .box:nth-child(2) {
+             margin:0;
+}
+            .box {
+                width: 100%;
+                margin-bottom: 10px !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">1</div>
+    <div class="box">1</div>
+    <div class="box">1</div>
+</body>
+
+</html>

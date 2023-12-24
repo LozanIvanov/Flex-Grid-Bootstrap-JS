@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+        :root {
+            --def-padding: 10px 30px;
+            --bg-gradient: linear-gradient(90deg, #76d5c0 0%, #00d4ff 100%);
+            --main-color: #21d0c5;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .main-btn {
+            width: 180px;
+            border: unset;
+            border-radius: 20px;
+            padding: 3px 25px;
+        }
+
+        .main-btn:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        body,
+        html,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .header {
+            background: var(--bg-gradient);
+            display: flex;
+            padding: var(--def-padding);
+            align-items: center;
+        }
+
+        .logo {
+            width: 10%;
+        }
+
+        .menu {
+            width: 90%;
+            text-align: right;
+        }
+
+        .menu ul li {
+            display: inline-block;
+            margin-left: 35px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+        }
+
+        /*HEADER END*/
+        /* INTRO */
+        .intro {
+            background: var(--bg-gradient);
+            display: flex;
+            padding: 50px;
+            color: white;
+            padding: 0 100px;
+        }
+
+        .i-left,
+        .i-right {
+            width: 50%;
+        }
+
+        .i-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .i-right h1,
+        .i-right p {
+            margin-bottom: 15px;
+        }
+
+        /*INTRO END */
+        /* ABOUT US */
+        .about {
+            display: flex;
+            padding: var(--def-padding);
+        }
+
+        .a-left h2,
+        .a-left p {
+            margin-bottom: 15px;
+        }
+
+        /* ABOUT US END */
+        /* SERVICES */
+        .service {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .s-title {
+            width: 100%;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .s-box {
+            width: 30%;
+            border: 1px solid silver;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .s-box h3 {
+            margin: 20px 0;
+        }
+
+        .s-box i {
+            border: 1px solid silver;
+            padding: 20px;
+            font-size: 32px;
+            border-radius: 50%;
+            color: var(--main-color);
+        }
+
+        /*SERVICES END */
+        /* FOOTER */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .copyright {
+            margin-bottom: 10px;
+        }
+
+        .social a {
+            color: var(--main-color);
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 32px;
+
+        }
+
+        /* FOOTER END */
+        @media(min-width:1024px){
+            .hide-desktop {
+              display: none;
+            }
+        }
+        @media(max-width:1024px) {
+
+            .hide-mobile {
+                display: none;
+            }
+
+            /* HEADER*/
+             .header{
+                flex-wrap: wrap;
+                padding: 10px;
+             }
+            .logo {
+                width: 50%
+            }
+            .hamburger{
+                width: 50%;
+                text-align: right;
+                color:white;
+                font-size: 32px;
+        
+            }
+            .menu{
+                margin-top: 10px;
+                width: 100%;
+                text-align: center;
+            }
+            .menu ul{
+                padding: 0;
+            }
+            .menu ul li{
+                display: block;
+                margin-bottom: 15px;
+                margin-left: 0;
+            }
+
+            /* HEADER END */
+            /* INTRO */
+            .intro {
+                padding: var(--def-padding);
+            }
+
+            .i-right {
+                width: 100%;
+            }
+
+            /*INTRO END */
+            /* SERVICES */
+            .service {
+                padding: var(--def-padding);
+            }
+
+            .s-box {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            /* SERVICES END */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <div class="header">
+        <div class="logo">
+            <img src="Images/logo.png" alt="">
+        </div>
+        <div class="hamburger hide-desktop">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About us</a>
+                </li>
+                <li>
+                    <a href="">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- HEADER END -->
+    <!-- INTRO-->
+    <div class="intro">
+        <div class="i-left hide-mobile">
+            <img src="Images//top-image.png">
+        </div>
+        <div class="i-right">
+            <h1>Disign Studio</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellat dignissimos eaque maxime expedita quis,
+                voluptate deserunt cumque cupiditate necessitatibus saepe.
+
+            </p>
+            <button class="main-btn">Learn more</button>
+        </div>
+    </div>
+    <!-- INTRO END-->
+    <!-- ABOUT US-->
+    <div class="about">
+        <div class="a-left">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipis
+                Repellat dignissimos eaque maxime expedita qu
+                voluptate deserunt cumque cupiditate necessit
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                Repellat dignissimos eaque maxime expedita quis,
+                voluptate deserunt cumque cupiditate necessitatibu....
+            </p>
+            <button class="main-btn">Learn more</button>
+        </div>
+        <div class="a-right hide-mobile">
+            <img src="Images/about-us.png" alt="">
+        </div>
+    </div>
+    <!-- ABOUT US END-->
+    <!-- Service-->
+    <div class="service">
+        <div class="s-title">
+            <h2>Services</h2>
+        </div>
+        <div class="s-box">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Website</h3>
+            <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Facilis explicabo ullam ad
+                suscipit nihil vero!
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Facilis explicabo u
+                suscipit nihil vero!
+            </p>
+
+        </div>
+        <div class="s-box">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Website</h3>
+            <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Facilis explicabo ullam ad
+                suscipit nihil vero!
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Facilis explicabo u
+                suscipit nihil vero!...
+            </p>
+        </div>
+        <div class="s-box">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Website</h3>
+            <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Facilis explicabo ullam ad
+                suscipit nihil vero!Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Facilis explicabo u
+                suscipit nihil vero!...
+            </p>
+        </div>
+
+    </div>
+    <!-- Service end-->
+    <!-- FOOTER-->
+    <div class="footer">
+        <div class="copyright">
+            Copyright &copy All right reserved;
+        </div>
+        <div class="social">
+            <a href="">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+        </div>
+
+    </div>
+    <!-- FOOTER END-->
+</body>
+
+</html>

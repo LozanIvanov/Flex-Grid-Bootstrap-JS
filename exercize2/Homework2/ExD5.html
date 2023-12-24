@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExD5</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&family=Open+Sans:ital,wght@0,300;0,800;1,300&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+        html,body{
+            margin:0;
+            font-family:  Montserrat;
+        }
+        .img{
+            width: 100%;
+        }
+        .container{
+            display:grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-auto-rows: 5rem;
+            border: 1px solid silver ;
+            padding:0.5rem;
+            margin: 2rem 8rem;
+            box-shadow: 8px 8px 17px 9px #c0c0c0;;
+        }
+        .box strong{
+            font-size: 1.3rem;
+            
+        }
+        .box img{
+            height: 20rem;
+            width: 25rem;
+
+        }
+        .box p{
+            width: 23rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.86rem;
+
+        }
+        .boxleft{
+            margin-top: 1.1rem;;    
+           
+        }
+        .f{
+             width:2rem;
+              height: 10rem;
+             background: orange;
+        }
+        .box:nth-child(1){
+           grid-column: 1/5;
+           grid-row: 1/7;
+           margin :30% 5% 5% 35%
+        }
+        .box:nth-child(2){
+            grid-column: 5/11;
+            grid-row: 1/7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <strong>This is grid box model</strong>
+            <div class="boxleft">
+                <div class="f"> 34</div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="/ex2items/task1/2.jpg">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ex
+                 sunt nihil facere dolorum nostrum vero incidunt blanditiis. Maiores
+                  cumque magnam inventore, quidem quo, asperiores voluptatem laudantium 
+                  nisi, voluptatibus corporis natus voluptas libero? Dolore magni numquam
+                   id minima error odit?
+                </p>
+        </div>
+
+    </div>
+</body>
+</html>

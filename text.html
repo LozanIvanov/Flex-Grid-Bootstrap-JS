@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Text</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap');
+
+    :root {
+      --def-padding: 10px 30px;
+      --bg-gradient: linear-gradient(90deg, #76d5c0 0%, #00d4ff 100%);
+      --main-color: #21d0c5;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+
+    }
+
+    img {
+      width: 100%;
+    }
+
+    body,
+    html,
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin: 0;
+    }
+
+    .main-btn {
+      width: 180px;
+      padding: 3px 25px;
+      border-radius: 20px;
+      border: unset;
+
+    }
+
+    .header {
+      display: flex;
+      padding: var(--def-padding);
+      background: var(--bg-gradient);
+      align-items: center;
+    }
+
+    .logo {
+      width: 10%;
+    }
+
+    .menu {
+      width: 90%;
+      text-align: right;
+
+    }
+
+    .menu ul li {
+      display: inline-block;
+      margin-left: 35px;
+    }
+
+    .menu ul li a {
+      font-size: 23px;
+      text-decoration: none;
+      color: white;
+    }
+
+    /* INTRO */
+    .intro {
+      background: var(--bg-gradient);
+      padding: 50px;
+      display: flex;
+      color: white;
+      padding: 0 100px;
+    }
+
+    .i-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .i-left,
+    .i-right {
+      width: 50%
+    }
+
+    .i-right h1,
+    p {
+      margin-bottom: 15px;
+    }
+
+    /* INTRO END */
+    /* ABOUT */
+    .about {
+      display: flex;
+      padding: var(--def-padding);
+    }
+
+    .a-left p {
+      margin: 15px 0;
+
+    }
+
+    /* ABOUT END */
+    /* service */
+    .service {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .service h2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px 0;
+    }
+
+    .box {
+      width: 30%;
+      border: 1px solid silver;
+      text-align: center;
+      padding: 35px;
+
+    }
+
+    .box i {
+      font-size: 32px;
+      border: 1px solid gray;
+      padding: 15px;
+      border-radius: 50%;
+      color: var(--main-color);
+      margin-bottom: 15px;
+    }
+
+    .box h3 {
+      margin-bottom: 15px;
+    }
+
+    /* service */
+    .d {
+      height: 200px;
+    }
+
+    .footer {
+      margin: 25px 0;
+      text-align: center;
+
+    }
+
+    .footer div {
+
+      margin-bottom: 15px;
+
+
+    }
+
+    .footer a {
+
+      color: var(--main-color);
+      margin-left: 20px;
+      font-size: 32px;
+      text-decoration: none;
+    }
+  
+    @media(min-width:1024px) {
+      
+      .hide-dectop{
+        display: none;
+      }
+      }
+      @media(max-width:1024px) {
+        .hide-mobile{
+          display: none;
+        }
+        
+        }
+       /* header */
+       .header{
+        flex-wrap: wrap;
+        padding: 10px;
+       }
+       .logo{
+        width: 50%;
+       }
+       .hamburger{
+        width: 50%;
+        text-align: right;
+        font-size: 32px;
+        color: white;
+
+       }
+       .menu{
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+       }
+       .menu ul{
+        
+        padding: 0;
+       }
+       .menu ul li{
+        display: block;
+        margin-bottom: 15px;
+        margin-left: 0;
+        
+       }
+       /* header end */
+        .intro {
+          padding: var(--def-padding);
+        }
+
+        .i-right {
+        width:100%
+        }
+
+        .service {
+      
+        padding: var(--def-padding);
+        
+          }
+
+          .box {
+          width: 100%;
+           margin: 10px;
+          }
+        
+    
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo " >
+      <img src="/Exercize1/ex1items/logo.png">
+    </div>
+    <div class="hamburger hide-dectop">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">About us</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <!-- INTRO -->
+  <div class="intro">
+    <div class="i-left hide-mobile" >
+      <img src="/Exercize1/ex1items/top-image.png">
+    </div>
+    <div class="i-right">
+      <h1>Design Studio</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Ipsam molestias nisi optio iste. Necessitatibus non recusandae
+        quis, ducimus hic illum, esse soluta temporibus fuga provident
+        veritatis, dolorum repellendus numquam eaque?
+      </p>
+      <button class="main-btn">Learn more</button>
+    </div>
+  </div>
+  <!-- INTRO END -->
+  <!-- ABOUT US-->
+  <div class="about">
+    <div class="a-left">
+      <h2>About</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Veniam laboriosam ipsam, amet temporibus a delectus beatae facere
+        , placeat iure tempore saepe inventore hic. Explicabo atque
+        # maxime pariatur eligendi veritatis rerum illo eveniet
+        labore consectetur, enim deserunt aliquam nulla.
+      </p>
+      <button class="main-btn">Learn more</button>
+    </div>
+    <div class="a-right  hide-mobile">
+      <img src="/Exercize1/ex1items/about-us.png">
+    </div>
+  </div>
+  <!-- ABOUT US END-->
+  <!-- SERVICE -->
+  <div class="service">
+    <h2>Service</h2>
+    <div class="box">
+      <i class="fa-solid fa-globe"></i>
+      <h3>Website</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Ex eos a doloremque reprehenderit exercitationem
+        perspiciatis molestiae ab cupiditate. Pariatur, quos.
+      </p>
+    </div>
+    <div class="box">
+      <i class="fa-solid fa-globe"></i>
+      <h3>Website</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Ex eos a doloremque reprehenderit exercitationem
+        perspiciatis molestiae ab cupiditate. Pariatur, quos.
+      </p>
+    </div>
+    <div class="box">
+      <i class="fa-solid fa-globe"></i>
+      <h3>Website</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Ex eos a doloremque reprehenderit exercitationem
+        perspiciatis molestiae ab cupiditate. Pariatur, quos.
+      </p>
+    </div>
+  </div>
+  <!-- SERVICE END-->
+  <!--footer-->
+  <div class="footer">
+    <div>coprright &copy all right served</div>
+    <a href="">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+
+  </div>
+  <div class="d"></div>
+
+</body>
+
+</html>

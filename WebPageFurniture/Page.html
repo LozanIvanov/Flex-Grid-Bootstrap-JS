@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;1,400&family=Open+Sans:ital,wght@0,300;0,800;1,300&family=Pinyon+Script&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&family=Roboto:ital,wght@0,700;1,300;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;1,400&family=Open+Sans:ital,wght@0,300;0,800;1,300&family=Philosopher:ital,wght@1,700&family=Pinyon+Script&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&family=Roboto:ital,wght@0,700;1,300;1,700&display=swap');
+
+        :root {
+            --main-color: #c0aa61;
+            --family-Philosopher: 'Philosopher', sans-serif;
+            --family-pinyon: 'Pinyon Script', sans-serif;
+            --background-color: #f5f6fa;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h2,
+        h3,
+        p {
+            margin: 0;
+
+        }
+
+        .main-button {
+            margin-top: 12rem;
+            margin-left: -12rem;
+            padding-bottom: 19rem;
+
+        }
+
+        .shop {
+            color: white;
+            border-radius: 1rem;
+            padding: 0.4rem 0.9rem;
+            width: 6.5rem;
+            background: var(--main-color);
+            border: unset;
+            font-size: 1rem;
+
+
+        }
+
+        .container-n {
+            background: lightskyblue;
+
+        }
+
+        .container {
+            margin: 0;
+        }
+
+        .container-nav {
+
+            padding: 2rem;
+
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--main-color);
+            font-family: 'Philosopher', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
+            width: 15%;
+            padding-left: 1rem;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            display: flex;
+            width: 60%;
+            margin-left: 4rem;
+
+        }
+
+        .nav ul li {
+            font-size: 1rem;
+            margin-right: 4rem;
+            cursor: pointer;
+        }
+
+        .nav ul li:hover {
+            color: var(--main-color);
+
+        }
+
+        .icons {}
+
+        .icons i {
+            margin-left: 2.7rem;
+            font-size: 1.2rem;
+            text-align: start;
+        }
+
+        .right {
+            padding-left: 4rem;
+        }
+
+        /*header*/
+        .header {
+            background: lightskyblue;
+            width: 53%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        h1 {
+            position: relative;
+            margin-top: 5.5rem;
+            margin-bottom: 0.2rem;
+            font-family: 'Pinyon Script', sans-serif;
+            letter-spacing: 0.4rem;
+            color: var(--main-color);
+        }
+
+        h1:before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 1px;
+            background: var(--main-color);
+            left: -110px;
+            top: 50%;
+            position: absolute;
+        }
+
+        h1:after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 1px;
+            background: var(--main-color);
+            left: 175px;
+            top: 50%;
+            position: absolute;
+        }
+
+        .header h2 {
+            margin-left: -2rem;
+            word-spacing: 0.4rem;
+            letter-spacing: 0.3rem;
+            font-weight: bold;
+        }
+
+        /*HEADER END*/
+        /* PICTURE */
+        .picture {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 9rem;
+            gap: 1rem
+        }
+
+        .box {
+            border: 1px solid black;
+        }
+
+        .box:nth-child(1) {
+            grid-column: 1/3;
+            grid-row: 1/4;
+        }
+
+        .box:nth-child(2) {
+            grid-column: 3;
+            grid-row: 1/3;
+        }
+
+        .box:nth-child(3) {
+            grid-column: 4;
+            grid-row: 1/3;
+        }
+
+        .box:nth-child(4) {
+            grid-column: 1/3;
+            grid-row: 4/6;
+        }
+
+        .box:nth-child(5) {
+            grid-column: 3/5;
+            grid-row: 3/5;
+        }
+
+        .box:nth-child(6) {
+            grid-column: 3/5;
+            grid-row: 5/7;
+        }
+
+        /* picture*/
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            padding-bottom: 2rem;
+
+        }
+
+        .button-end {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+            padding: 0 2.5rem 2rem 0;
+        }
+
+        .button-start {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: start;
+            padding-bottom: 2rem;
+            padding-left: 3rem;
+        }
+
+        .picture h2 {
+            font-family: var(--family-Philosopher);
+            letter-spacing: 0.2rem;
+            word-spacing: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .picture h3 {
+            font-family: var(--family-pinyon);
+            font-size: 1.6rem;
+            color: var(--main-color);
+            margin-bottom: 0.5rem;
+
+        }
+
+        .box-5 {
+            box-sizing: border-box;
+            border: 3px dashed black;
+            width: 39%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            margin-left: 2.5rem;
+        }
+
+        .box-5 p {
+            font-size: 2.7rem;
+            font-family: var(--family-Philosopher);
+            letter-spacing: 0.2rem;
+
+        }
+
+        .box-5 h3 {
+            margin-bottom: 0;
+            color: black;
+            font-size: 1.4rem;
+            font-family: var(--family-pinyon);
+            letter-spacing: 0.2rem;
+        }
+
+        .big {
+            font-size: 3.7rem !important;
+        }
+
+        .big span {
+            color: var(--main-color);
+            font-size: 3.7rem;
+        }
+
+        /* PICTURE END*/
+        /*NEW PRODUCTS */
+        .container-product {
+            width: 60%;
+            border: 1px solid black;
+            margin: 4rem auto;
+
+        }
+
+        .container-product h2 {
+            text-align: center;
+            font-family: var(--family-Philosopher);
+            font-size: 2.2rem;
+            letter-spacing: 0.2rem;
+        }
+
+        .container-product h3 {
+            text-align: center;
+            font-family: var(--family-pinyon);
+            color: var(--main-color);
+            font-size: 2rem;
+            letter-spacing: 0.4rem;
+            padding: 0.8rem 0;
+        }
+
+        .nav-p {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 1.7rem 0;
+            width: 50%;
+            margin: 0 auto;
+            justify-content: space-between;
+            cursor: pointer;
+
+
+        }
+
+        .nav-p li {
+            font-family: var(--family-Philosopher);
+            letter-spacing: 0.1rem;
+        }
+
+        .nav-p li:hover {
+            cursor: pointer;
+            color: var(--main-color);
+        }
+
+        .product-box {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        .single-box {
+            width: 23%;
+        }
+
+        .single-box:hover>.single-header {
+            cursor: pointer;
+
+            border: 1px solid var(--main-color);
+        }
+
+        .single-box:hover>.single-footer {
+
+            cursor: pointer;
+            display: none;
+        }
+
+        .single-box:hover>.footer-hide {
+            cursor: pointer;
+            display: block;
+        }
+
+        .single-header {
+            border: 1px solid #eaeaea;
+            height: 21rem;
+        }
+
+        .single-footer h3 {
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            text-align: start;
+            padding-top: 1.5rem;
+            padding-bottom: 0;
+
+        }
+
+        .footer-p {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+        }
+
+        .footer-p ul {
+            display: flex;
+            list-style-type: none;
+            font-size: 0.7rem;
+            width: 30%;
+            justify-content: start;
+            justify-content: space-between;
+            margin-left: 0;
+            padding-left: 0;
+
+        }
+
+        .price-p {
+            font-size: 1.4rem;
+            letter-spacing: 0.1rem;
+            color: var(--main-color)
+        }
+
+        .footer-hide {
+            margin-top: 1.2rem;
+        }
+
+        .footer-hide i {
+
+            font-size: 1.6rem;
+            border: 3px solid #eaeaea;
+            padding: 0.9rem;
+            border-radius: 50%;
+            margin-right: 0.4rem;
+        }
+
+        .footer-hide i:hover {
+
+            font-size: 1.6rem;
+            border: 3px solid #eaeaea;
+            padding: 0.9rem;
+            border-radius: 50%;
+            margin-right: 0.4rem;
+            background: var(--main-color);
+            color: white
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .button-p {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 6rem;
+
+        }
+
+        .button:hover {
+            cursor: pointer;
+            color: white;
+            background: var(--main-color);
+            border: none
+        }
+
+        .button-p a {
+            text-align: center;
+            text-decoration: none;
+
+        }
+
+        .button {
+            border: 2px solid black;
+        
+            font-size: 1rem;
+            padding: 0.5rem 2rem;
+            letter-spacing: 0.1rem;
+            font-family: var(--family-Philosopher);
+            background: white;
+            font-weight: bold;
+        }
+
+        /*NEW PRODUCTS END*/
+        /* VIEW ITEM */
+        .container-item {
+            padding-top: 4rem;
+            padding-bottom: 3rem;
+            background: #f5f6fa;
+
+
+        }
+
+        .box-item {
+            width: 77%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            grid-auto-rows: 11rem;
+
+        }
+
+        .box-i {
+        
+        }
+
+        .box-i:nth-child(1) {
+            grid-column: 3/10;
+            grid-row: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+        }
+
+        .box-i:nth-child(2) {
+            grid-column: 3/10;
+            grid-row: 2;
+        }
+
+        .box-i:nth-child(3) {
+            grid-column: 3/10;
+            grid-row: 3;
+            text-align: center;
+            padding-top: 2rem;
+        }
+
+        .box-i:nth-child(4) {
+            grid-column: 12/19;
+            grid-row: 1/4;
+            border: 1px solid black;
+        }
+
+        .box-i h3 {
+            color: var(--main-color);
+            margin-bottom: 0.2rem;
+            font-family: var(--family-pinyon);
+            font-size: 2rem;
+            letter-spacing: 0.4rem;
+            word-spacing: 0.3rem;
+        }
+
+        .box-i h2 {
+            font-family: var(--family-Philosopher);
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .box-i p {
+            color: rgb(198, 189, 189);
+            padding-bottom: 5rem;
+        }
+
+        .box-i ul {
+            margin: 2rem 0;
+            padding: 0;
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box-i li {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            border-radius: 2rem;
+            min-height: 7rem;
+
+
+        }
+
+        .date {
+            border-bottom: 1px solid black;
+            font-size: 1.8rem;
+            margin: 1rem;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-family: var(--family-Philosopher);
+            letter-spacing: 0.2rem;
+        }
+
+        .day {
+
+            text-align: center;
+            padding-top: 0.5rem;
+            font-size: 0.7rem;
+
+        }
+
+        .box-i-b {
+            border-radius: 1rem;
+            padding: 0.5rem 1.9rem;
+            font-size: 0.8rem;
+            font-family: var(--family-Philosopher);
+        }
+
+        /* VIEW ITEM END */
+        /*BEST SELLER*/
+        .container-best {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 4rem;
+        }
+
+        .container-best h2 {
+            text-align: center;
+            font-family: var(--family-Philosopher);
+            font-size: 2.5rem;
+            letter-spacing: 0.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .container-best h3 {
+            text-align: center;
+            font-family: var(--family-pinyon);
+            color: var(--main-color);
+            font-size: 2rem;
+            letter-spacing: 0.4rem;
+            padding: 0.8rem 0;
+        }
+
+        .box-s {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 24rem;
+            gap: 1.2rem
+        }
+
+        .box-s-b {}
+
+        .box-s-b:nth-child(1) {
+            grid-column: 1/3;
+            grid-row: 1/3;
+        }
+
+        .box-s-b:nth-child(2) {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .box-s-b:nth-child(3) {
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+        .box-s-b:nth-child(4) {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        .box-s-b:nth-child(5) {
+            grid-column: 4;
+            grid-row: 2;
+        }
+
+        .single-header-s {
+            height: 20.5rem;
+            border: 1px solid black;
+
+        }
+
+        .single-footer-s h3 {
+            font-size: 1rem;
+            padding-bottom: 0;
+            padding-top: 0.3rem;
+            text-align: start;
+        }
+
+        .footer-p-s {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.1rem;
+        }
+
+        .footer-p-s ul {
+            display: flex;
+            list-style-type: none;
+            font-size: 0.7rem;
+            width: 30%;
+            justify-content: start;
+            justify-content: space-between;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .single-header-f {
+            border: 1px solid black;
+            height: 45.5rem;
+        }
+
+        .single-footer-s h3 {
+            font-size: 1rem;
+            padding-bottom: 0;
+            padding-top: 0.3rem;
+            text-align: start;
+        }
+
+        .footer-p-s-f {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-p-s-f ul {
+            display: flex;
+            list-style-type: none;
+            font-size: 0.7rem;
+            width: 14%;
+            justify-content: start;
+            justify-content: space-between;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .price-p-f {
+            font-size: 1.4rem;
+            letter-spacing: 0.1rem;
+            color: var(--main-color);
+        }
+
+        .box-i-b {
+            text-align: center;
+            margin-top: 0.6rem;
+            margin-bottom: 1.8rem;
+
+        }
+
+        /*BEST SELLER END */
+        /* BLOG */
+        .container-blog {
+            background: var(--background-color);
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .container-blog h3 {
+            text-align: center;
+            font-family: var(--family-pinyon);
+            color: var(--main-color);
+            font-size: 2.2rem;
+            letter-spacing: 0.4rem;
+        }
+
+        .container-blog h2 {
+            text-align: center;
+            font-family: var(--family-Philosopher);
+            font-size: 2.3rem;
+            letter-spacing: 0.4rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .blog {
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            background: var(--background-color);
+            justify-content: space-between;
+        }
+
+        .blog-i {
+            width: 48.5%;
+            text-align: center;
+
+        }
+
+        .blog-header {
+            height: 24rem;
+            background: white;
+            margin-bottom: 2rem;
+        }
+
+        .blog-i f4 {
+            font-size: 1.5rem;
+            font-family: var(--family-Philosopher);
+            letter-spacing: 0.4rem;
+            word-spacing: 0.2rem;
+            color: #3b3b3b;
+        }
+
+        .blog-i p {
+            margin: 1rem 0;
+            margin-bottom: 2rem;
+            font-size: 0.8rem;
+            color: rgb(224, 168, 100)
+        }
+
+        .blog-i a {
+            color: rgb(106, 104, 104);
+            font-size: 0.8rem;
+
+        }
+
+        .blog-i i {
+            padding-left: 0.3rem;
+        }
+
+        /* BLOG END */
+        /* FOOTER*/
+        .container-footer {
+            width: 60%;
+            margin: 0 auto;
+            padding-top: 4rem;
+
+        }
+
+        .container-footer h2 {
+            color: var(--main-color);
+            font-size: 2.1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .box-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: #b2b2b2;
+            border-bottom: 1px solid #b2b2b2;
+
+
+        }
+
+        .address {
+            width: 35%;
+
+        }
+
+        .address>div {
+            margin-bottom: 0.6rem;
+        }
+
+        .address a {
+            text-decoration: none;
+            color: #b2b2b2;
+        }
+
+        .account {
+            display: flex;
+            flex-direction: column;
+            width: 15%;
+        }
+
+        .account a {
+            margin-bottom: 0.6rem;
+            text-decoration: none;
+            color: #b2b2b2;
+        }
+
+        .help {
+            display: flex;
+            flex-direction: column;
+            width: 15%;
+        }
+
+        .help a {
+            margin-bottom: 0.6rem;
+            text-decoration: none;
+            color: #b2b2b2;
+        }
+
+        .map {
+            width: 35%;
+            display: flex;
+            flex-wrap: wrap;
+
+
+        }
+
+        .map>div {
+            border: 1px solid #b2b2b2;
+            padding: 0.2rem 1.6rem;
+            margin-right: 0.6rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .about {
+            margin-top: 2rem;
+            margin-left: 9rem;
+            margin-bottom: 1rem;
+
+        }
+
+        .b {
+            border: unset !important;
+        }
+
+        .about a {
+            border-right: 1px solid #b2b2b2;
+            padding: 0 2rem;
+        }
+        .footer-end{
+            text-align: center;
+            margin-top: 1rem;
+            word-spacing: 0.2rem;
+            letter-spacing: 0.1rem;
+            color:#b2b2b2;
+            font-size: 0.8rem;;
+        }
+    </style>
+</head>
+
+
+
+
+
+<body>
+    <div class="container">
+        <div class="container-n">
+            <!--Nav-->
+            <div class="container-nav">
+                <div class="nav">
+                    <div class="logo">BLACATZ</div>
+                    <ul>
+                        <li>Home</li>
+                        <li>Shop</li>
+                        <li>Pages</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                    </ul>
+                    <div class="icons">
+                        <i class="fa-regular fa-user"></i>
+                        <i class="fa fa-magnifying-glass"></i>
+                        <i class="fa-regular fa-envelope"></i>
+                        <i class="fa  fa-gear right"></i>
+                    </div>
+                </div>
+                <div class="header">
+
+                </div>
+            </div>
+            <!--NAV END-->
+            <!--header-->
+            <div class="header">
+                <div class="head">
+                    <h1>Furniture</h1>
+                    <h2>VERA NOVIES</h2>
+                </div>
+                <div class="main-button">
+                    <button class="shop">shop now</button>
+                </div>
+            </div>
+            <!--header end-->
+        </div>
+        <!--PICTURE-->
+        <div class="picture">
+            <div class="box button">
+                <h3>b r e a t i v e</h3>
+                <h2>CHAIR FURNITURE</h2>
+            </div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box button-end">
+                <h3>f u r n i t u r e</h3>
+                <h2>GREEN EMERLAND</h2>
+            </div>
+            <div class="box">
+                <div class="box-5">
+                    <h3>Take an extra</h3>
+                    <p class="big"><span>3 0</span> %</p>
+                    <p>S A L E</p>
+                </div>
+            </div>
+            <div class="box button-start">
+                <h3>u n i q u e</h3>
+                <h2>INDOOR FURNITURE</h2>
+            </div>
+            <div class="box">7</div>
+            <div class="box ">
+
+            </div>
+        </div>
+        <!--PICTURE END-->
+        <!-- NEW PRODUCTS-->
+        <div class="container-product">
+            <h3>Indoor Furniture</h3>
+            <h2>NEW PRODUCTS</h2>
+            <ul class="nav-p">
+                <li>Living Rooms</li>
+                <li>Bed Rooms</li>
+                <li>Bath Rooms</li>
+                <li>Office Furniture</li>
+                <li>Others</li>
+            </ul>
+            <div class="product-box">
+                <div class="single-box">
+                    <div class="single-header"></div>
+                    <div class="single-footer">
+                        <h3>Unique Pending Light</h3>
+                        <div class="footer-p">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                    <div class="footer-hide hide">
+                        <i class="fa-solid fa-maximize"></i>
+                        <i class="fa-solid fa-rotate"></i>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+                <!---->
+                <div class="single-box">
+                    <div class="single-header"></div>
+                    <div class="single-footer">
+                        <h3>Unique Pending Light</h3>
+                        <div class="footer-p">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="single-box">
+                    <div class="single-header"></div>
+                    <div class="single-footer">
+                        <h3>Unique Pending Light</h3>
+                        <div class="footer-p">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-box">
+                    <div class="single-header"></div>
+                    <div class="single-footer">
+                        <h3>Unique Pending Light</h3>
+                        <div class="footer-p">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-box">
+                    <div class="single-header"></div>
+                    <div class="single-footer">
+                        <h3>Unique Pending Light</h3>
+                        <div class="footer-p">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-box">
+                    <div class="single-header"></div>
+                    <div class="single-footer">
+                        <h3>Unique Pending Light</h3>
+                        <div class="footer-p">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-box">
+                    <div class="single-header"></div>
+                    <div class="single-footer">
+                        <h3>Unique Pending Light</h3>
+                        <div class="footer-p">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-box">
+                    <div class="single-header"></div>
+                    <div class="single-footer">
+                        <h3>Unique Pending Light</h3>
+                        <div class="footer-p">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 29.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-p">
+                <a href="">
+                    <button class="button">VIEW ALL</button>
+                </a>
+            </div>
+        </div>
+        <!-- NEW PRODUCTS END -->
+        <!--View ITEM-->
+        <div class="container-item">
+            <div class="box-item">
+                <div class="box-i">
+                    <h3>Deal of Week</h3>
+                    <h2>UNION - FURNITURE</h2>
+                    <p>Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Beatae incidunt
+                        distinctio consectetur ipsum odio ipsam quam
+                        illo dolorum perspiciatis? Deserunt, voluptate natus.
+                        distinctio consectetur ipsum odio ips
+                        illo dolorum perspiciatis? Deserunt,
+                    </p>
+                </div>
+                <div class="box-i">
+                    <ul>
+                        <li>
+                            <span class="date">23</span>
+                            <span class="day">DAY</span>
+                        </li>
+                        <li>
+                            <span class="date">23</span>
+                            <span class="day">HOURS</span>
+                        </li>
+                        <li>
+                            <span class="date">23</span>
+                            <span class="day">MINUTES</span>
+                        </li>
+                        <li>
+                            <span class="date">23</span>
+                            <span class="day">SECONDS</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-i">
+                    <a href="">
+                        <button class="box-i-b">VIEW ALL</button>
+                    </a>
+                </div>
+                <div class="box-i"></div>
+            </div>
+        </div>
+        <!--VIEW ITEM END-->
+        <!--BEST SELER-->
+        <div class="container-best">
+            <h3>Indoor Furniture</h3>
+            <h2>BEST SELLER</h2>
+            <div class="box-s">
+                <div class="box-s-b">
+                    <div class="single-header-f"></div>
+                    <div class="single-footer-s">
+                        <h3>Unique Pend Light</h3>
+                        <div class="footer-p-s-f">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p-f">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!--box-->
+                <div class="box-s-b">
+                    <div class="single-header-s"></div>
+                    <div class="single-footer-s">
+                        <h3> Chair Unique</h3>
+                        <div class="footer-p-s">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--box end-->
+                <!--box-->
+                <div class="box-s-b">
+                    <div class="single-header-s"></div>
+                    <div class="single-footer-s">
+                        <h3>Unique Light</h3>
+                        <div class="footer-p-s">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!--box end-->
+                <!--box-->
+                <div class="box-s-b">
+                    <div class="single-header-s"></div>
+                    <div class="single-footer-s">
+                        <h3>Chair Unique</h3>
+                        <div class="footer-p-s">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!--box end-->
+                <!--box-->
+                <div class="box-s-b">
+                    <div class="single-header-s"></div>
+                    <div class="single-footer-s">
+                        <h3>Chair Unique</h3>
+                        <div class="footer-p-s">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                            <div class="price-p">$ 290.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-i-b">
+                <a href="">
+                    <button class="box-i-b">VIEW ALL</button>
+                </a>
+            </div>
+        </div>
+        <!--BEST SELER END-->
+        <!--Blog-->
+        <div class="container-blog">
+
+            <h3>Indoor Furniture</h3>
+            <h2>LATEST BLOGS</h2>
+
+            <div class="blog">
+                <div class="blog-i">
+                    <div class="blog-header"></div>
+                    <f4>Our Furniture Collection Reflect Your Lifestyle</f4>
+                    <p>MAR O. 2025 : 20COMENT</p>
+                    <a href="">CONTINUE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="blog-i">
+                    <div class="blog-header"></div>
+                    <f4>Our Furniture Collection Reflect Your Lifestyle</f4>
+                    <p>MAR O. 2025 :20 COMENT</p>
+                    <a href="">CONTINUE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Blog End-->
+        <!-- FOOTER-->
+        <div class="container-footer">
+            <h2>BLACATZ</h2>
+            <div class="box-footer">
+                <div class="address">
+                    <div> Adress: No 40 Baria Street 153.2 New York City.</div>
+                    <div>NY, United States</div>
+                    <div> <a href="">Email: info.contact@gmail.com</a></div>
+                    <div> <a href="">Phone: (00) 125 456 789</a></div>
+                </div>
+                <div class="account">
+                    <a href="">My account</a>
+                    <a href="">My Order</a>
+                    <a href="">Register</a>
+                    <a href="">Login</a>
+                </div>
+                <div class="help">
+                    <a href="">New User</a>
+                    <a href="">Help Centre</a>
+                    <a href="">Report Spam</a>
+                    <a href="">FAQs</a>
+                </div>
+                <div class="map">
+                    <div>Music</div>
+                    <div>Travel</div>
+                    <div>Video</div>
+                    <div>Ecommerce</div>
+                    <div>Feature</div>
+                    <div>Test</div>
+                    <div>Sports</div>
+                    <div>Fashon</div>
+                    <div>Store</div>
+                </div>
+                <div class="about">
+                    <a>About</a>
+                    <a>Customer Service</a>
+                    <a>Term & Condition</a>
+                    <a>Privacy policy</a>
+                    <a>Site </a>
+                    <a class="b">Contact</a>
+                </div>
+            </div>
+            <div class="footer-end">
+                Copyright <span>BLACATZ</span> copy 2023 all right reserved
+            </div>
+        </div>
+        <!-- footer end-->
+    </div>
+
+
+
+</body>
+
+</html>

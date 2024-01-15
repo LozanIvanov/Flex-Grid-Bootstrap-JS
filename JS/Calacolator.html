@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Направете калкулатор с три полета – Първо поле е за числото А, второ поле е за знака,
+третото поле е за числото B. Създайте и бутон. При натискане на бутона показва резултата.-->
+
+    <div>
+        <label for="">Number</label>
+        <input type="number" id="one">
+    </div>
+    <div>
+        <label for="">Sign</label>
+        <input type="text" id="sign">
+    </div>
+    <div>
+        <label for="">Number</label>
+        <input type="number" id="two">
+    </div>
+    <button onclick="calc()">Do</button>
+
+    <div id="res"></div>
+
+    <script>
+        function calc() {
+            let f = parseFloat(document.getElementById('one').value);
+            let s = parseFloat(document.getElementById('two').value);
+            let si = document.getElementById('sign').value;
+            let r = document.getElementById('res');
+            let rea = 0;
+            switch (si) {
+                case '+':
+                    rea = f + s
+                    break;
+                case '-':
+                    rea = f - s
+                    break;
+                case '*':
+                    rea = f * s
+                    break;
+                case '/':
+                    rea = f / s
+                    break;
+
+                default:
+                    break;
+            }
+            if (isNaN(rea)) {
+                rea = `wrong`;
+            }
+            r.innerHTML = rea;
+        }
+
+    </script>
+</body>
+
+</html>

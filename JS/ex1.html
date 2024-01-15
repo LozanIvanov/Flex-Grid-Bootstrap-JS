@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Създайте два параграфа с текст. Трябва да премахнете текста от двата параграфа и да
+    гиобедините в един.-->
+    <p id="one">Lorem ipsum dolor sit.</p>
+    <p id="two"name="names">Lorem, ipsum dolor.</p>
+    <button id="b" onclick="join()">Do</button>
+
+  <script>
+    function join(){
+    let first=document.getElementById('one');
+    let sec=document.getElementById('two');
+
+      first.innerHTML+= sec.innerHTML;
+      sec.remove();
+    }
+  </script>
+
+</body>
+</html>

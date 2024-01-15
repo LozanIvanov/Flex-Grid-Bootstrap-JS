@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Направете падащо меню с няколко избора и картинки.
+     Когато менюто промени стойността си картинките се променят.-->
+
+     <img src="/ex5items/2.jpg" id="img" style="width: 100%;height: 35rem;">
+     <select onchange="change(this)">
+        <option value="/ex5items/1.jpg" >summer</option>
+        <option value="/ex5items/2.jpg" >winter</option>
+        <option value="/ex5items/3.jpg" >summer</option>
+     </select>
+
+     <script>
+        function change(el){
+            document.getElementById('img').setAttribute(`src`,el.value)
+        }
+     </script>
+</body>
+</html>

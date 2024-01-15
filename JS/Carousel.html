@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <img src="/ex5items/1.jpg" id="img" style="width: 100%; height: 35rem;">
+</div>
+    <button onclick="change(`next`)">Next</button>
+    <button onclick="change(`prev`)">Previous</button>
+
+    <script>
+        let curr=1;
+        function change(el){
+            let img=document.getElementById('img');
+
+            if(el=='next'){
+                curr++;
+                if(curr>3){
+                    curr=1;
+                }
+            }
+            else{
+                curr--;
+                if(curr<=0){
+                    curr=3
+                }
+            }
+            img.setAttribute(`src`,`/ex5items/${curr}.jpg`)
+
+          /*  setInterval(function() {
+                change(`next`);
+            },1500) */
+        }
+    </script>
+</body>
+</html>

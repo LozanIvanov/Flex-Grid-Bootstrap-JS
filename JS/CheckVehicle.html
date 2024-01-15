@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--. Създайте текстово поле в което се въвежда превозно средство (колело, кола, мотор) – ако
+е въведено кола или мотор изписва, че е необходимо да имаме 18 години. Ако е въведено
+колело изписва, че трябва минимално 5 години.-->
+    <input type="text" id="t">
+    <button onclick="check()">Check</button>
+    <div id="result"></div>
+
+    <script>
+        function check(){
+            let text=document.getElementById('t').value;
+            let res=document.getElementById('result');
+        
+            switch (text) {
+                case "car" : 
+                case "motorbike":
+                    res.innerHTML='Must be 18 years old'
+                    break;
+                case "bike":
+                    res.innerHTML="Must be 5 years old"
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

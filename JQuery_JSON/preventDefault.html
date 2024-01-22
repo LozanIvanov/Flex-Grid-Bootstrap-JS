@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--onclick return и preventDefault-->
+    <a href="https://google.bg/" id=""example>Link Google</a>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+       $(function(){
+        $('#example').click(function(e){
+            e.preventDefault();//използва се преди да отиде на на линка да направи някаква проверка
+             if(true){
+                window.location.href=$(this).attr('href');
+               // window -> това е начин за пренасочване сJAVAScript за пренасочжане към друга страница след прожерка
+             }
+        })
+       })
+    </script>
+</body>
+</html>

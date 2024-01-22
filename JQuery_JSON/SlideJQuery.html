@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         img{
+
+  
+         }
+            
+         .container{
+           
+           
+            
+            width: 100%;
+            height: 45rem;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+           <img id="slide" src="/JQ_Image/photo-1480074568708-e7b720bb3f09.avif">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        const arr=['/JQ_Image/2.jpg','/JQ_Image/3.jpg','/JQ_Image/1.jpg'];
+        let count=1;
+        $(function(){
+            setInterval(function(){
+                if(count>=arr.length){
+                    count=0;
+                }
+                $('#slide').attr('src',arr[count]);
+                count++;
+            },1500);      
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        .box {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+
+        }
+
+        .hiding {
+            animation: hiding-anima 0.5s;
+        }
+
+        .showing {
+            animation: showing-anima 0.5s;
+        }
+
+        ul {
+            list-style-type: none;
+            text-decoration: none;
+
+        }
+
+        ul li {
+            margin-right: 10px;
+
+
+
+        }
+
+        @keyframes showing-anima {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @keyframes hiding-anima {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(0)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <ul class="d-flex">
+                <li><a href="#" data-filter-category="all">All</a></li>
+                <li><a href="#" data-filter-category="movies">Movies</a></li>
+                <li><a href="#" data-filter-category="games">Games</a></li>
+                <li><a href="#" data-filter-category="webs">Web</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-4 mt-4" data-category="games">
+                <div class="box bg-primary">Games</div>
+            </div>
+
+            <div class="col-4 mt-4" data-category="movies">
+                <div class="box bg-danger">Movies</div>
+            </div>
+
+            <div class="col-4 mt-4" data-category="games">
+                <div class="box bg-primary">Games</div>
+            </div>
+            <div class="col-4 mt-4" data-category="webs">
+                <div class="box bg-success">Web</div>
+            </div>
+
+            <div class="col-4 mt-4" data-category="games">
+                <div class="box bg-primary">Games</div>
+            </div>
+
+            <div class="col-4 mt-4" data-category="movies">
+                <div class="box bg-danger">Movies</div>
+            </div>
+
+            <div class="col-4 mt-4" data-category="webs">
+                <div class="box bg-success">Web</div>
+            </div>
+
+            <div class="col-4 mt-4" data-category="webs">
+                <div class="box bg-success">Web</div>
+            </div>
+            <div class="col-4 mt-4" data-category="movies">
+                <div class="box bg-danger">Movies</div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+        <script>
+            $(function () {
+                $('[data-category]').on('click', function () {
+                    const el = $(this);
+                    const category = el.data('category');
+
+                    const target = $(`[data-category][data-category!=${category}]`);
+                    target.addClass('hiding');
+                    setTimeout(() => {
+                        target.hide();
+                        target.removeClass('hiding');
+
+                    }, 450)
+                })
+            })
+
+            $('[data-filter-category]').on('click', function () {
+                const el = $(this);
+                const category = el.data('filter-category');
+
+                if (category == "all") {
+                    const target = $('[data-category]');
+                    target.addClass('showing');
+                    target.show();
+                    setTimeout(() => {
+                    
+                        target.removeClass('showing');
+                    }, 450)
+
+                }
+                else {
+                    const targetsToShow = $(`[data-category=${category}]`);
+                    const targetToHide = $(`[data-category][data-category!=${category}]`);
+
+                    targetToHide.addClass('hiding');
+                    setTimeout(() => {
+                        targetToHide.hide();
+                        targetToHide.removeClass('hiding');
+                    }, 450)
+
+                    targetsToShow.addClass('showing');
+                    targetsToShow.show();
+                    setTimeout(() => {
+
+                        targetsToShow.removeClass('showing');
+                    }, 450)
+                }
+            });
+        </script>
+</body>
+
+</html>

@@ -61,7 +61,7 @@
         $(function(){
             loadCountries();
 
-            $('#countries').change(function(){
+            $('#countries').change(function(){$
                 $('#cities').html('');
                 let selectedCountry=counties.find(c=>c.name==$(this).val());
                 if(selectedCountry){
